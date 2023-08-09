@@ -16,4 +16,69 @@ body {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   padding: 3rem;
+  color: #777;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10rem 0;
+}
+
+.header__title {
+  margin-right: 3rem;
+}
+
+.header__title--main,
+.header__title--sub {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.header__title--main {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  animation: fadeInLeft 1s ease-in-out ;
+}
+
+.header__title--sub {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.header__images {
+  position: relative;
+}
+
+.header__images--darkblob {
+  height: 400px;
+  opacity: 0.8;
+}
+
+.header__images--blueblob,
+.header__images--simcard {
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80%{
+    transform: translateX(-2rem);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
